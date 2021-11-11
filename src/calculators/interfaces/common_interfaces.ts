@@ -1,5 +1,5 @@
-import {Keypoint} from './src/shared/calculators/interfaces/common_interfaces';
-import {BoundingBox} from './src/shared/calculators/interfaces/shape_interfaces';
+import { Keypoint } from '../../../src/shared/calculators/interfaces/common_interfaces';
+import { BoundingBox } from '../../../src/shared/calculators/interfaces/shape_interfaces';
 
 /**
  * @license
