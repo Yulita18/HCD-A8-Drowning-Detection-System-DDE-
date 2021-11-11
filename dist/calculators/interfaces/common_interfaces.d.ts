@@ -1,5 +1,5 @@
-import { Keypoint } from '.././shared/calculators/interfaces/common_interfaces';
-import { BoundingBox } from '.././shared/calculators/interfaces/shape_interfaces';
+import { Keypoint } from '../shared/calculators/interfaces/common_interfaces';
+import { BoundingBox } from '../shared/calculators/interfaces/shape_interfaces';
 /**
  * @license
  * Copyright 2021 Google LLC. All Rights Reserved.

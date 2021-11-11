@@ -53,9 +53,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var tfconv = require("@tensorflow/tfjs-converter");
 var tf = require("@tensorflow/tfjs-core");
-var convert_image_to_tensor_1 = require("./shared/calculators/convert_image_to_tensor");
-var image_utils_1 = require("./shared/calculators/image_utils");
-var shift_image_value_1 = require("./shared/calculators/shift_image_value");
+var convert_image_to_tensor_1 = require("shared/calculators/convert_image_to_tensor");
+var image_utils_1 = require("shared/calculators/image_utils");
+var shift_image_value_1 = require("shared/calculators/shift_image_value");
 var decode_multiple_poses_1 = require("./calculators/decode_multiple_poses");
 var decode_single_pose_1 = require("./calculators/decode_single_pose");
 var flip_poses_1 = require("./calculators/flip_poses");
