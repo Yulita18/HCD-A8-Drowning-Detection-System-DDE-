@@ -15,7 +15,7 @@
  * =============================================================================
  */
 import * as tf from '@tensorflow/tfjs-core';
-import { Keypoint } from '../shared/calculators/interfaces/common_interfaces';
+import { Keypoint } from './src/shared/calculators/interfaces/common_interfaces';
 import { Pose } from '../../types';
 import { Part, PartWithScore, Vector2D } from '../types';
 export declare function toTensorBuffers3D(tensors: tf.Tensor3D[]): Promise<Array<tf.TensorBuffer<tf.Rank.R3>>>;
