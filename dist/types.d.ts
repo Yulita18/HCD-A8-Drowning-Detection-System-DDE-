@@ -14,8 +14,8 @@
  * limitations under the License.
  * =============================================================================
  */
-import { DetectorInput, Keypoint } from './shared/calculators/interfaces/common_interfaces';
-import { BoundingBox } from './shared/calculators/interfaces/shape_interfaces';
+import { DetectorInput, Keypoint } from '../shared//calculators/interfaces/common_interfaces';
+import { BoundingBox } from '../shared//calculators/interfaces/shape_interfaces';
 export { Keypoint };
 export declare enum SupportedModels {
     MoveNet = "MoveNet",

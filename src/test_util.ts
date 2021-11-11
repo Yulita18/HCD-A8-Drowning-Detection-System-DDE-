@@ -16,7 +16,7 @@
  */
 
 import * as poseDetection from './index';
-import {KARMA_SERVER} from './shared/test_util';
+import {KARMA_SERVER} from '../shared//test_util';
 
 const SIMULATED_INTERVAL = 33.333;  // in milliseconds
 
