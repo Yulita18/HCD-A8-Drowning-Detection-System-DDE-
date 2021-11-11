@@ -52,7 +52,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var detector_1 = require("./blazepose_mediapipe/detector");
-var detector_2 = require("./blazepose_tfjs/detector");
 var detector_3 = require("./movenet/detector");
 var detector_4 = require("./posenet/detector");
 var types_1 = require("./types");

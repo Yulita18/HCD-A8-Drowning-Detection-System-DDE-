@@ -17,8 +17,6 @@
 
 import {load as loadBlazePoseMediaPipeDetector} from './blazepose_mediapipe/detector';
 import {BlazePoseMediaPipeModelConfig, BlazePoseModelConfig} from './blazepose_mediapipe/types';
-import {load as loadBlazePoseTfjsDetector} from './blazepose_tfjs/detector';
-import {BlazePoseTfjsModelConfig} from './blazepose_tfjs/types';
 import {load as loadMoveNetDetector} from './movenet/detector';
 import {MoveNetModelConfig} from './movenet/types';
 import {PoseDetector} from './pose_detector';
@@ -33,7 +31,7 @@ import {SupportedModels} from './types';
  */
 export async function createDetector(
     model: SupportedModels,
-    modelConfig?: PosenetModelConfig|BlazePoseTfjsModelConfig|
+    modelConfig?: PosenetModelConfig|
     BlazePoseMediaPipeModelConfig|MoveNetModelConfig): Promise<PoseDetector> {
   switch (model) {
     case SupportedModels.PoseNet:
@@ -42,10 +40,7 @@ export async function createDetector(
       const config = modelConfig as BlazePoseModelConfig;
       let runtime;
       if (config != null) {
-        if (config.runtime === 'tfjs') {
-          return loadBlazePoseTfjsDetector(
-              modelConfig as BlazePoseTfjsModelConfig);
-        }
+     
         if (config.runtime === 'mediapipe') {
           return loadBlazePoseMediaPipeDetector(
               modelConfig as BlazePoseMediaPipeModelConfig);
