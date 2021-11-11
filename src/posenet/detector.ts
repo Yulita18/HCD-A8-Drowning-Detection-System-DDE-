@@ -19,9 +19,9 @@ import * as tfconv from '@tensorflow/tfjs-converter';
 import * as tf from '@tensorflow/tfjs-core';
 
 import {PoseDetector} from '../pose_detector';
-import {convertImageToTensor} from './src/shared/calculators/convert_image_to_tensor';
-import {getImageSize} from './src/shared/calculators/image_utils';
-import {shiftImageValue} from './src/shared/calculators/shift_image_value';
+import {convertImageToTensor} from '../shared/calculators/convert_image_to_tensor';
+import {getImageSize} from '../shared/calculators/image_utils';
+import {shiftImageValue} from '../shared/calculators/shift_image_value';
 import {InputResolution, Pose, PoseDetectorInput} from '../types';
 
 import {decodeMultiplePoses} from './calculators/decode_multiple_poses';

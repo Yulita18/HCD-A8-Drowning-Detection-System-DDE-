@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {Keypoint} from './src/shared/calculators/interfaces/common_interfaces';
+import {Keypoint} from '../shared/calculators/interfaces/common_interfaces';
 
 import {Pose} from '../types';
 
