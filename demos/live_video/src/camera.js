@@ -49,6 +49,27 @@ const COLOR_PALETTE = [
   '#9a6324', '#000075', '#f58231', '#4363d8', '#ffd8b1', '#dcbeff', '#808000',
   '#ffe119', '#911eb4', '#bfef45', '#f032e6', '#3cb44b', '#a9a9a9'
 ];
+function base64ToBlob(base64, mime) {
+  mime = mime || '';
+  var sliceSize = 1024;
+  var byteChars = window.atob(base64);
+  var byteArrays = [];
+
+  for (var offset = 0, len = byteChars.length; offset < len; offset += sliceSize) {
+    var slice = byteChars.slice(offset, offset + sliceSize);
+
+    var byteNumbers = new Array(slice.length);
+    for (var i = 0; i < slice.length; i++) {
+      byteNumbers[i] = slice.charCodeAt(i);
+    }
+
+    var byteArray = new Uint8Array(byteNumbers);
+
+    byteArrays.push(byteArray);
+  }
+
+  return new Blob(byteArrays, { type: mime });
+}
 export class Camera {
   constructor() {
     this.video = document.getElementById('video');
@@ -156,12 +177,17 @@ export class Camera {
    * Draw the keypoints and skeleton on the video.
    * @param pose A pose with keypoints to render.
    */
+  
   drawResult(pose) {
     if (pose.keypoints != null) {
       this.drawKeypoints(pose.keypoints);
       this.drawSkeleton(pose.keypoints, pose.id);
       var keypoint_list = pose.keypoints;
-      if ((keypoint_list[7]['score'] >= 0.5082668280601501 && keypoint_list[7]['score'] <= 0.9082668280601501 && keypoint_list[9]['score'] >= 0.5082668280601501 && keypoint_list[9]['score'] <= 0.9082668280601501 && keypoint_list[8]['score'] >= 0.5082668280601501) || (keypoint_list[8]['score'] <= 0.9082668280601501 && keypoint_list[10]['score'] >= 0.5082668280601501 && keypoint_list[10]['score'] <= 0.9082668280601501)) {
+      var left_val = Math.atan((keypoint_list[7]['x']-keypoint_list[9]['x'])/(keypoint_list[7]['y']-keypoint_list[9]['y']))
+      var left_angleDeg = left_val * 180 / Math.PI;
+      var right_val = Math.atan((keypoint_list[8]['x']-keypoint_list[10]['x'])/(keypoint_list[8]['y']-keypoint_list[10]['y']))
+      var right_angleDeg = right_val * 180 / Math.PI;
+      if ((left_angleDeg >= 0 && left_angleDeg <=20) || (right_angleDeg >= 0 && right_angleDeg <=20)) {
         this.var_deteksi = 'Berpotensi Tenggelam'
         const dataURL = this.canvas.toDataURL();
         if (dataURL && this.state) {
@@ -171,7 +197,26 @@ export class Camera {
           this.gambar.src = dataURL;
           this.gambar_div.appendChild(this.gambar)
           this.deteksi.innerHTML = this.var_deteksi;
+          var base64ImageContent = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+          var blob = base64ToBlob(base64ImageContent,'image/png')
+          var formData = new FormData();
+          formData.append('file', blob);
 
+          $.ajax({
+            type: 'POST',
+            url: 'https://app-dde.herokuapp.com/api/result-api',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function (data) {
+              console.log("success");
+              console.log(data);
+            },
+            error: function (data) {
+              console.log("error");
+            }
+          });
         }
 
       }
