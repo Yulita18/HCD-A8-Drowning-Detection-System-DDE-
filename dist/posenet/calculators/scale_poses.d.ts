@@ -14,6 +14,6 @@
  * limitations under the License.
  * =============================================================================
  */
-import { ImageSize, Padding } from '../shared/calculators/interfaces/common_interfaces';
+import { ImageSize, Padding } from '.././shared/calculators/interfaces/common_interfaces';
 import { InputResolution, Pose } from '../../types';
 export declare function scalePoses(poses: Pose[], imageSize: ImageSize, inputResolution: InputResolution, padding: Padding): Pose[];

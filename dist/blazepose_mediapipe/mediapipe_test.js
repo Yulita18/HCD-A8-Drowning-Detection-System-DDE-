@@ -57,7 +57,7 @@ var jasmine_util_1 = require("@tensorflow/tfjs-core/dist/jasmine_util");
 // tslint:disable-next-line: no-imports-from-dist
 var test_util_1 = require("@tensorflow/tfjs-core/dist/test_util");
 var poseDetection = require("../index");
-var test_util_2 = require("shared/test_util");
+var test_util_2 = require("./shared/test_util");
 var test_util_3 = require("../test_util");
 var MEDIAPIPE_MODEL_CONFIG = {
     runtime: 'mediapipe',

@@ -14,6 +14,6 @@
  * limitations under the License.
  * =============================================================================
  */
-import { ImageSize } from '../shared/calculators/interfaces/common_interfaces';
+import { ImageSize } from '.././shared/calculators/interfaces/common_interfaces';
 import { Pose } from '../../types';
 export declare function flipPosesHorizontal(poses: Pose[], imageSize: ImageSize): Pose[];
