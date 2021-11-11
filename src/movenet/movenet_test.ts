@@ -23,7 +23,7 @@ import {expectArraysClose} from '@tensorflow/tfjs-core/dist/test_util';
 
 import {COCO_KEYPOINTS} from '../constants';
 import * as poseDetection from '../index';
-import {KARMA_SERVER} from '../shared/test_util';
+import {KARMA_SERVER} from './shared/test_util';
 import {loadVideo} from '../test_util';
 
 import {SINGLEPOSE_LIGHTNING} from './constants';
