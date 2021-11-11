@@ -21,7 +21,7 @@ import {BROWSER_ENVS, describeWithFlags} from '@tensorflow/tfjs-core/dist/jasmin
 import {expectArraysClose} from '@tensorflow/tfjs-core/dist/test_util';
 
 import * as poseDetection from '../index';
-import {KARMA_SERVER, loadImage} from './src/shared/test_util';
+import {KARMA_SERVER, loadImage} from '../shared/test_util';
 import {getXYPerFrame, loadVideo} from '../test_util';
 
 import {BlazePoseMediaPipeModelConfig} from './types';
