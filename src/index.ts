@@ -17,7 +17,6 @@
 // Top level exports.
 // Entry point to create a new detector instance.
 export {BlazePoseMediaPipeEstimationConfig, BlazePoseMediaPipeModelConfig, BlazePoseModelType} from './blazepose_mediapipe/types';
-export {BlazePoseTfjsEstimationConfig, BlazePoseTfjsModelConfig} from './blazepose_tfjs/types';
 export {createDetector} from './create_detector';
 export {MoveNetEstimationConfig, MoveNetModelConfig} from './movenet/types';
 // PoseDetector class.
