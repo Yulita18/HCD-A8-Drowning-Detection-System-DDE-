@@ -1,1 +1,0 @@
-web: chmod -R a+x demos/live_video/node_modules
