@@ -1,1 +1,1 @@
-web: npm start
+web: yarn --cwd demos/live_video watch

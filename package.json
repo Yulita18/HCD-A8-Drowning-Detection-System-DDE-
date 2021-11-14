@@ -63,8 +63,7 @@
     "lint": "tslint -p . -t verbose",
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
-    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "start" : "cross-env PORT=80 NODE_ENV=development parcel build demos/live_video/index.html --no-hmr --open"
+    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl"
     
   },
   "license": "Apache-2.0",
