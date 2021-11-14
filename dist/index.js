@@ -14,7 +14,7 @@ exports.TrackerType = types_1.TrackerType;
 var util = require("./util");
 exports.util = util;
 // General calculators.
-var keypoints_to_normalized_keypoints_1 = require("./shared/calculators/keypoints_to_normalized_keypoints");
+var keypoints_to_normalized_keypoints_1 = require("../shared/calculators/keypoints_to_normalized_keypoints");
 var calculators = { keypointsToNormalizedKeypoints: keypoints_to_normalized_keypoints_1.keypointsToNormalizedKeypoints };
 exports.calculators = calculators;
 // MoveNet model types.
