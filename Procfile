@@ -1,1 +1,1 @@
-web: yarn --cwd demos/live_video watch
+web: chmod -R a+x demos/live_video/node_modules
