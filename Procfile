@@ -1,1 +1,1 @@
-web : yarn --cwd demos/live_video watch
+web : yarn --cwd demos/live_video watch 
