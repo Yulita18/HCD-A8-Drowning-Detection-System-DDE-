@@ -69,5 +69,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
