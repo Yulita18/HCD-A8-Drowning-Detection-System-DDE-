@@ -64,7 +64,7 @@
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
     "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "postinstall": "chmod -R a+x demos/live_video/node_modules"
+    "postinstall": "yarn --cwd demos/live_video install"
   },
   "license": "Apache-2.0",
   "dependencies": {
