@@ -1,1 +1,1 @@
-web: yarn install && yarn --cwd demos/live_video && yarn --cwd demos/live_video build-dep && yarn --cwd demos/live_video build
+web: npm i -g rollup && yarn install && yarn --cwd demos/live_video && yarn --cwd demos/live_video build-dep && yarn --cwd demos/live_video build
