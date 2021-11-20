@@ -53,7 +53,7 @@
   },
   "scripts": {
     "bundle": "rollup -c",
-    "build": "rimraf dist && yarn tsc && yarn bundle",
+    "build": "rimraf dist && yarn bundle",
     "publish-local": "yarn ",
     "run-browserstack": "karma start --browserstack",
     "test-node": "NODE_PRESERVE_SYMLINKS=1 ts-node --skip-ignore --project tsconfig.test.json run_tests.ts",
@@ -63,8 +63,7 @@
     "lint": "tslint -p . -t verbose",
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
-    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "tsc": "tsc"
+    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl"
   },
   "license": "Apache-2.0",
   "dependencies": {
