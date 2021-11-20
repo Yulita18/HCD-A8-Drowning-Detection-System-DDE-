@@ -18,7 +18,7 @@
     "scatter-gl": "0.0.8"
   },
   "scripts": {
-    "watch": "cross-env PORT=443 NODE_ENV=development parcel index.html --no-hmr --open",
+    "watch": "cross-env HOST=dde.sman2abdya.sch.id PORT=443 NODE_ENV=development parcel index.html --no-hmr --open",
     "build": "cross-env PORT=5000 NODE_ENV=production parcel build index.html --public-url ./",
     "lint": "eslint .",
     "build-dep": "cd ../../../ && yarn && yarn build",
