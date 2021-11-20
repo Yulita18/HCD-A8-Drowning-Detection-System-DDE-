@@ -23,7 +23,7 @@
     "@babel/polyfill": "^7.10.4",
     "@mediapipe/pose": "~0.4.0",
     "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-node-resolve": "^7.1.3",
     "@rollup/plugin-typescript": "^3.0.0",
     "@tensorflow/tfjs-backend-cpu": "^3.8.0",
     "@tensorflow/tfjs-backend-wasm": "^3.8.0",
@@ -63,8 +63,7 @@
     "lint": "tslint -p . -t verbose",
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
-    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "postinstall" : "npm i @rollup/plugin-node-resolve"
+    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl"
   },
   "license": "Apache-2.0",
   "dependencies": {
