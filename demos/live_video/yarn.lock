@@ -977,7 +977,7 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@tensorflow-models/pose-detection@../../dist":
+"@tensorflow-models/pose-detection@file:../../dist":
   version "0.0.0"
 
 "@tensorflow/tfjs-backend-cpu@3.8.0":
