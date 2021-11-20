@@ -62,7 +62,7 @@
     "lint": "tslint -p . -t verbose",
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
-    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
+    "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl"
   },
   "license": "Apache-2.0",
   "dependencies": {
