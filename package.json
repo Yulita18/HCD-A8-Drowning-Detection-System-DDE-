@@ -64,7 +64,6 @@
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
     "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "postinstall": "yarn && yarn-build"
   },
   "license": "Apache-2.0",
   "dependencies": {
