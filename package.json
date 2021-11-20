@@ -52,7 +52,6 @@
     "yalc": "~1.0.0-pre.50"
   },
   "scripts": {
-    "bundle": "rollup -c",
     "build": "rimraf dist && yarn bundle",
     "publish-local": "yarn ",
     "run-browserstack": "karma start --browserstack",
@@ -64,7 +63,6 @@
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
     "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "rollup": "rollup"
   },
   "license": "Apache-2.0",
   "dependencies": {
