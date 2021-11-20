@@ -64,7 +64,7 @@
     "publish-demo": "./scripts/publish-demo.sh",
     "link-core": "yalc link @tensorflow/tfjs-core",
     "link-webgl": "yalc link @tensorflow/tfjs-backend-webgl",
-    "preinstall": "npm i -g rollup"
+    "preinstall": "npm i -g rollup && npm i rollup"
   },
   "license": "Apache-2.0",
   "dependencies": {
