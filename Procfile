@@ -1,1 +1,1 @@
-web: yarn --cwd demos/live_video && yarn --cwd demos/live_video build-dep && yarn --cwd demos/live_video build
+web: yarn install && yarn --cwd demos/live_video && yarn --cwd demos/live_video build-dep && yarn --cwd demos/live_video build
