@@ -52,8 +52,7 @@
     "yalc": "~1.0.0-pre.50"
   },
   "scripts": {
-    "bundle": "yarn rollup -c",
-    "build": "rimraf dist && yarn bundle",
+    "build": "rimraf dist",
     "publish-local": "yarn ",
     "run-browserstack": "karma start --browserstack",
     "test-node": "NODE_PRESERVE_SYMLINKS=1 ts-node --skip-ignore --project tsconfig.test.json run_tests.ts",
