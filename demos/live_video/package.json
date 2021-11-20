@@ -9,7 +9,7 @@
     "node": ">=8.9.0"
   },
   "dependencies": {
-    "@mediapipe/pose": "~0.4.0",
+    "@mediapipe/pose": "^0.4.1633558788",
     "@tensorflow-models/pose-detection": "../../dist",
     "@tensorflow/tfjs-backend-wasm": "^3.8.0",
     "@tensorflow/tfjs-backend-webgl": "^3.8.0",
