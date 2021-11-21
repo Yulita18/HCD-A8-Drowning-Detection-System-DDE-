@@ -187,7 +187,7 @@ export class Camera {
       var left_angleDeg = left_val * 180 / Math.PI;
       var right_val = Math.atan((keypoint_list[8]['x']-keypoint_list[10]['x'])/(keypoint_list[8]['y']-keypoint_list[10]['y']))
       var right_angleDeg = right_val * 180 / Math.PI;
-      if ((left_angleDeg >= 0 && left_angleDeg <=20) || (right_angleDeg >= 0 && right_angleDeg <=20)) {
+      if ((left_angleDeg >= 0 && left_angleDeg <=20) && (right_angleDeg >= 0 && right_angleDeg <=20)) {
         this.var_deteksi = 'Berpotensi Tenggelam'
         const dataURL = this.canvas.toDataURL();
         if (dataURL && this.state) {
